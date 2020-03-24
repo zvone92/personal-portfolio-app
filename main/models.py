@@ -11,7 +11,7 @@ class About(models.Model):
         return "Who am i"
 
 
-class Skills(models.Model):
+class Skill(models.Model):
 
     icon = models.ImageField(upload_to='skills')
     name  = models.CharField(max_length=100, verbose_name='skill name')
@@ -21,7 +21,7 @@ class Skills(models.Model):
         return self.name
 
 
-class Projects(models.Model):
+class Project(models.Model):
 
     image = models.ImageField(upload_to='projects')
     name  = models.CharField(max_length=100, verbose_name='Project name')

@@ -3,7 +3,8 @@ from django.db import models
 
 class About(models.Model):
 
-    photo = models.ImageField(upload_to='about')
+    cover = models.ImageField(upload_to='about', default='/about/mini-startrail.jng')
+    photo = models.ImageField(upload_to='about', default='/about/profilna.jng')
     short_description    = models.TextField()
     detailed_description = models.TextField()
 

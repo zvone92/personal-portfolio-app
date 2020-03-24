@@ -1,0 +1,343 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+/*---------------------header section--------------------------*/
+#header{
+  margin:0;
+  height: 75vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/mini-startrail.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.user-box{
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.user-box img{
+  border-radius: 50%;
+  width: 155px;
+
+/*  border: 2px solid #fff;*/
+}
+
+
+
+.pulsate{
+margin: 0px 50px 15px 50px;
+animation: shadow-pulse-big 2s infinite;
+}
+
+
+@keyframes shadow-pulse-big
+{
+0% {box-shadow: 0 0 0 0px  rgb(140,135,255);}
+100% {box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);}
+}
+
+
+.user-box h2{
+  color: #fff;
+  font-weight: bold;
+  margin: 30px 0px;
+  animation: Slide_Up 0.5s ease;
+}
+
+.user-box h5{
+  margin: -25px 0 16px;
+  font-size: 20px;
+  color: #fff;
+  animation: Slide_right 1s ease;
+}
+
+@keyframes Slide_Up{
+    0%{transform:translateY(250px);}
+    100%{transform:translateY(0);}
+}
+
+@keyframes Slide_right{
+    0%{transform:translateX(-250px);}
+    100%{transform:translateX(0);}
+}
+
+.user-box .btn{
+  /*
+  padding: 10px 25px 10px 25px;
+
+  border: 3px solid #fff;
+  border-radius: 30px;
+  background: transparent;
+  */
+  color: #fff;
+  background: rgb(140,160,255);
+  animation: Slide_left 1s ease;
+}
+
+@keyframes Slide_left{
+    0%{transform:translateX(250px);}
+    100%{transform:translateX(0);}
+}
+
+
+.user-box .btn:focus{
+  box-shadow: none !important;
+}
+
+
+/*-------------social icon boxes-----------------------*/
+
+.button-container {
+  text-align: center;
+  margin-top: -28px;
+
+}
+
+.button-container .btn-icon{
+    margin:2px;
+    border-radius:50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #fff;
+    height: 60px;
+    width:60px;
+}
+
+.button-container .btn-icon i{
+  padding-top: 6px;
+  font-size: 1.5em;
+  color: #686868;
+}
+
+/*
+.user-box .btn:hover{
+  border: 2px solid #fff !important;
+  background: linear-gradient(184deg, rgba(24,24,89,1) 0%, rgba(97,166,255,1) 41%, rgba(255,175,199,1) 94%,
+  rgba(249,255,165,1) 99%);
+}
+
+.user-box .btn .fa{
+  margin-right: 10px;
+}
+
+
+.scroll-btn{
+  bottom: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  padding: 10px 10px 20px;
+  border-radius: 30px;
+}
+
+.scroll-bar span{
+  border: 2px solid #fff;
+  font-size: 10px;
+  border-radius: 30px;
+}
+
+.scroll-bar{
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  0%{transform: translateY(0px);}
+  100%{transform: translateY(10px);}
+}
+*/
+
+
+
+/*-----------------------------about section--------------------------------*/
+
+#about{/*---------this is snippet from sololearn about---------*/
+    margin-top:20px;
+    padding:50px 5px;
+}
+
+.card{/*---------this is snippet from sololearn about---------*/
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+.about{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.profile-img{
+  height: 200px;
+}
+
+
+/*
+#nav-bar {
+  margin:0;
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+
+
+#nav-bar {
+  margin:0;
+  background: transparent !important;
+
+}
+
+#nav-bar-nav{
+  margin:0;
+  float: left;
+  text-align: left;
+  position: sticky;
+
+}
+*/
+
+
+/*---------------------------skills section----------------------------*/
+
+.skill-box{
+  margin: 100px 0;
+}
+
+.card-counter{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /*  box-shadow: 2px 2px 10px #DADADA;*/
+    margin: 5px;
+    padding: 10px 40px;
+    background-color: #fff;
+    height: 250px;
+    border-radius: 5px;
+    transition: .3s linear all;
+    background-color: #fff;
+  }
+
+
+  .card-counter:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    transition: .3s linear all;
+  }
+
+
+
+
+
+  .card-counter.primary{
+    background-color: #007bff;
+    color: #FFF;
+  }
+
+  .card-counter i{
+    font-size: 5em;
+    color: rgb(140,160,255);
+  }
+
+
+  .card-counter .count-name{
+    /*
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    */
+    /*font-style: italic;*/
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0.5;
+    display:block;
+    font-size: 18px;
+  }
+
+  .card-counter .skill-name{
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0.5;
+    display:block;
+  }
+
+  .card-counter .fa {
+   /*
+    position: absolute;
+
+    left: 0;
+      */
+    top: 20%;
+    width: 100%;
+    text-align: center;
+
+  }
+
+/*-----------------------------portfolio box--------------------------------*/
+.portfolio-box{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+
+
+/*--------------------------------contact---------------------------------*/
+
+.contact{
+  padding-top: 50px;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(images/startrail.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.contact .row{
+  padding: 30px 0;
+  font-size: 22px;
+}
+
+.contact .col-md-4 .fa{
+  padding: 10px;
+  font-size: 40px;
+}
+
+.contact .btn{
+  padding: 10px 25px 10px 25px;
+  margin: 5px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  background: transparent;
+}
+
+.contact .btn:focus{
+  box-shadow: none !important;
+}
+
+.contact .btn:hover{
+  border: 2px solid #fff !important;
+  background:  rgb(140,160,255);
+  transition: 0.6s;
+}
+
+.contact .btn .fa{
+  margin-right: 10px;
+}
+
+.footer{
+  background: rgb(140,160,255);
+  height: 50px;
+  margin-top: 50px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.fa-heart-o{
+  color: red;
+}

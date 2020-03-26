@@ -4,8 +4,8 @@ from .models import About, Skill, Project
 
 def portfolio(request):
     about = About.objects.first()
-    skills = Skill.objects.all()
-    projects = Project.objects.all()
+    skills = Skill.objects.all().order_by('pk')
+    projects = Project.objects.all().order_by('pk')
 
     context = {'about': about,
                'skills': skills,

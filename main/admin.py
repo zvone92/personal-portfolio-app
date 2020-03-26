@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import About, Skill, Project
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ('short_description', 'photo', 'detailed_description')
+    list_display = ('short_description', 'cover', 'photo', 'detailed_description')
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = ('name', 'icon', 'technologies')

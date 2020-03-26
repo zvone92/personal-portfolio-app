@@ -37,7 +37,7 @@
       <img class="pulsate" src="{{ about.photo.url }}" alt="profile picture">
       <h2>Zvonimir Vlah</h2>
       <h5>PYTHON DEVELOPER</h5>
-      <a class="btn smooth-scroll mr-2" href="#contact">Hire Me</a>
+      <a class="btn smooth-scroll mr-2" href="mailto:vlahzvonimir92@gmail.com">Hire Me</a>
       <a class="btn smooth-scroll mr-2" href="#" >Portfolio</a>
 
     </div>
@@ -53,13 +53,13 @@
 <!---icon boxes------------->
 <div class="container">
   <div class="button-container">
-    <a class="btn btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Facebook">
+    <a class="btn btn-round btn-lg btn-icon" href="https://github.com/zvone92" rel="tooltip" title="Follow me on Facebook">
       <i class="fa fa-github"></i>
     </a>
     <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Twitter">
       <i class="fa fa-twitter"></i>
     </a>
-    <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Instagram">
+    <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.instagram.com/zvone_vlah" rel="tooltip" title="Follow me on Instagram">
       <i class="fa fa-instagram"></i>
     </a>
   </div>
@@ -67,7 +67,6 @@
 
 <!--- about section --------------------------------->
 
-<!--this is box with shadows from solo code-->
 <section id="about" class="come-in">
   <div class="container">
     <div class="card" >
@@ -117,43 +116,15 @@
           <div class="h4 text-center mb-4 title">My Skills</div>
           <div class="container">
             <div class="row">
+              {% for skill in skills %}
               <div class="col-md-3">
                 <div class="card-counter">
-
-                  <i class="fa fa-code-fork"></i>
-                  <h5 class="skill-name">BACK END</h5>
-                  <span class="count-name">Python</span>
-                  <span class="count-name">Django</span>
+                  <i class="{% cycle 'fa fa-window-restore' 'fa fa-code-fork' 'fa fa-database' 'fa fa-server' %}"></i>
+                  <h5 class="skill-name">{{ skill.name }}</h5>
+                  <span class="count-name">{{ skill.technologies|linebreaks  }}</span>
                 </div>
               </div>
-
-              <div class="col-md-3">
-                <div class="card-counter">
-                  <i class="fa fa-window-restore"></i>
-                  <h5 class="skill-name">FRONT END</h5>
-                  <span class="count-name">CSS3</span>
-                  <span class="count-name">HTML5</span>
-                  <span class="count-name">BOOTSTRAP4</span>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card-counter ">
-                  <i class="fa fa-database"></i>
-                  <h5 class="skill-name">DATABASE</h5>
-                  <span class="count-name">PostgreSql</span>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div class="card-counter">
-                  <i class="fa fa-server"></i>
-                  <h5 class="skill-name">DEPLOYMENT</h5>
-                  <span class="count-name">GIT</span>
-                  <span class="count-name">GITHUB</span>
-                  <span class="count-name">Gunix</span>
-                </div>
-              </div>
+             {% endfor %}
             </div>
           </div>
         </div>
@@ -165,39 +136,21 @@
             <div class="container">
 
               <div class="row">
-                <!-- Album ... -->
+                <!--Portfolio Projects ...-->
+                {% for project in projects %}
                 <div class="col-md-6">
                   <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src='images/weather-app.png' />
+                    <img class="bd-placeholder-img card-img-top" src='{{project.image.url}}' />
                     <div class="card-body">
-                      <p class="card-text"></p>
+                      <hr>
+                      <h5 class="card-title">{{project.name}}</h5>
+                      <p class="card-text">{{project.description}}</p>
+                      <a href="{{project.github_url}}" class="btn btn-primary">github</a>
+                      <a href="#" class="btn btn-primary">Demo</a>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src='images/weather-app.png' />
-                    <div class="card-body">
-                      <p class="card-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src='images/weather-app.png'/>
-                    <div class="card-body">
-                      <p class="card-text"></p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img class="bd-placeholder-img card-img-top" src='images/weather-app.png'/>
-                    <div class="card-body">
-                      <p class="card-text"></p>
-                    </div>
-                  </div>
-                </div>
+                {% endfor %}
               </div>
             </div>
           </div>

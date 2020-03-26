@@ -9,7 +9,7 @@ body{
 #header{
   margin:0;
   height: 75vh;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(images/mini-startrail.jpg);
+
   background-position: center;
   background-size: cover;
   background-attachment: fixed;

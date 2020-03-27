@@ -12,16 +12,16 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">HOME</a>
+        <a class="nav-link" href="#header">HOME</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">ABOUT ME</a>
+        <a class="nav-link" href="#about">ABOUT ME</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">PORTFOLIO</a>
+        <a class="nav-link " href="#user-info">SKILLS</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link " href="#">SKILLS</a>
+        <a class="nav-link" href="#portfolio">PORTFOLIO</a>
       </li>
     </ul>
   </div>
@@ -53,7 +53,7 @@
 <!---icon boxes------------->
 <div class="container">
   <div class="button-container">
-    <a class="btn btn-round btn-lg btn-icon" href="https://github.com/zvone92" rel="tooltip" title="Follow me on Facebook">
+    <a class="btn btn-round btn-lg btn-icon" href="https://github.com/zvone92" rel="tooltip" title="Follow me on GitHub">
       <i class="fa fa-github"></i>
     </a>
     <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Twitter">
@@ -73,18 +73,16 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card-body">
-            <div class="h4 mt-0 title">Who am i?</div>
+            <div class="h4 mt-0 title">Who am I?</div>
 
-            <p>{{about.short_description}}<br>
-              Python developer</p>
+            <p>{{about.short_description|linebreaks}}</p>
               <p>
-                {{about.detailed_description}}
+                {{about.detailed_description|linebreaks}}
               </p>
             </div>
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="card-body">
-              <div class="h4 mt-0 title">Basic Information</div>
               <div class="row">
                 <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
                 <div class="col-sm-8">28</div>
@@ -119,7 +117,7 @@
               {% for skill in skills %}
               <div class="col-md-3">
                 <div class="card-counter">
-                  <i class="{% cycle 'fa fa-window-restore' 'fa fa-code-fork' 'fa fa-database' 'fa fa-server' %}"></i>
+                  <i class="{% cycle 'fa fa-code-fork' 'fa fa-window-restore' 'fa fa-database' 'fa fa-server' %}"></i>
                   <h5 class="skill-name">{{ skill.name }}</h5>
                   <span class="count-name">{{ skill.technologies|linebreaks  }}</span>
                 </div>
@@ -130,7 +128,7 @@
         </div>
 
         <!--- portfolio section --------------------------------->
-        <div class="portfolio-box">
+        <div id='portfolio' class="portfolio-box">
           <div class="h4 text-center mb-4 title">Portfolio</div>
           <div class="album py-5 bg-light">
             <div class="container">
@@ -139,7 +137,7 @@
                 <!--Portfolio Projects ...-->
                 {% for project in projects %}
                 <div class="col-md-6">
-                  <div class="card mb-4 shadow-sm">
+                  <div class="card mb-4 shadow-lg">
                     <img class="bd-placeholder-img card-img-top" src='{{project.image.url}}' />
                     <div class="card-body">
                       <hr>
@@ -157,7 +155,7 @@
         </div>
 
         <!--- contact section --------------------------------->
-        <div class="contact" id="contact">
+        <div id="contact" class="contact" >
           <div class="container text-center">
             <h1>Contact Me</h1>
             <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt

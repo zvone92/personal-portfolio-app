@@ -3,7 +3,6 @@
   <title>Personal Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   {%  include 'includes/stylesheets.html' %}
-
   <style>
       #header{
         margin:0;
@@ -21,20 +20,10 @@
         background: rgb(140,160,255) !important;
       }
     </style>
-
 </head>
 <body>
   {% block content %}
-
-
   {% endblock %}
-
   {%  include 'includes/scripts.html' %}
-  <script>
-    $(window).scroll(function(){
-      $('nav').toggleClass('scrolled', $(this).scrollTop() > 300);
-
-    });
-  </script>
 </body>
 </html>

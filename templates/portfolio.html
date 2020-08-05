@@ -5,7 +5,7 @@
 
 <!--- navbar --------------------------------->
 <nav id="nav-bar"class="navbar navbar-expand-lg navbar-dark navbar-default bg-dark fixed-top">
-  <a class="navbar-brand" href="#">CV</a>
+  <a class="navbar-brand" href="#">ZV</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -27,18 +27,16 @@
   </div>
 </nav>
 
-
 <!--- header section ----------------------------------->
 <section id="header">
-
 
   <div class="container text-center">
     <div class="user-box">
       <img class="pulsate" src="{{ about.photo.url }}" alt="profile picture">
       <h2>Zvonimir Vlah</h2>
       <h5>PYTHON DEVELOPER</h5>
-      <a class="btn smooth-scroll mr-2" href="mailto:vlahzvonimir92@gmail.com">Hire Me</a>
-      <a class="btn smooth-scroll mr-2" href="#" >Portfolio</a>
+      <a class="btn" href="mailto:vlahzvonimir92@gmail.com"><strong>Hire Me</strong></a>
+      <a class="btn" href="#portfolio" ><strong>See my work</strong></a>
 
     </div>
   </div>
@@ -53,7 +51,7 @@
 <!---icon boxes------------->
 <div class="container">
   <div class="button-container">
-    <a class="btn btn-round btn-lg btn-icon" href="https://github.com/zvone92" rel="tooltip" title="Follow me on GitHub">
+    <a class="btn btn-round btn-lg btn-icon" href="https://github.com/zvone92" rel="tooltip" title="See my GitHub profile">
       <i class="fa fa-github"></i>
     </a>
     <a class="btn btn-default btn-round btn-lg btn-icon" href="#" rel="tooltip" title="Follow me on Twitter">
@@ -66,7 +64,6 @@
 </div>
 
 <!--- about section --------------------------------->
-
 <section id="about" class="come-in">
   <div class="container">
     <div class="card" >
@@ -96,7 +93,7 @@
                 <div class="col-sm-8">+385 95 557 0340</div>
               </div>
               <div class="row mt-3">
-                <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
+                <div class="col-sm-4"><strong class="text-uppercase">Location:</strong></div>
                 <div class="col-sm-8">Obala kneza Branimira, 25 23000 Zadar</div>
               </div>
               <div class="row mt-3">
@@ -142,9 +139,9 @@
                     <div class="card-body">
                       <hr>
                       <h5 class="card-title">{{project.name}}</h5>
-                      <p class="card-text">{{project.description}}</p>
-                      <a href="{{project.github_url}}" class="btn btn-primary">github</a>
-                      <a href="#" class="btn btn-primary">Demo</a>
+                      <p class="card-text">{{project.description|linebreaks}}</p>
+                      <a href="{{project.github_url}}" class="btn">Source Code</a>
+                      <a href="#" class="btn">Demo</a>
                     </div>
                   </div>
                 </div>
@@ -158,27 +155,25 @@
         <div id="contact" class="contact" >
           <div class="container text-center">
             <h1>Contact Me</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-              ut labore et dolore magna aliqua.
-            </p>
+        <!-- <p class="text-center"></p> -->
             <div class="row">
               <div class="col-md-4">
-                <i class="fa fa-phone"></i>
+                <a href="tel:0955770340"><i class="fa fa-phone" title="Call Me"></i></a>
                 <p>0955770340</p>
               </div>
               <hr>
               <div class="col-md-4">
-                <i class="fa fa-envelope"></i>
+                <a href="mailto:vlahzvonimir92@gmail.com"><i class="fa fa-envelope" title="Send me a mail"></i></a>
                 <p>vlahzvonimir92@gmail.com</p>
               </div>
               <div class="col-md-4">
                 <i class="fa fa-internet-explorer"></i>
-                <p>www.zvonimirvlah.com</p>
+                <p>zvonimirvlah.com</p>
               </div>
             </div>
           </div>
           <div class="footer text-center">
-            <p><i class="fa fa-heart-o"></i></p>
+            <p>Site by <strong>Zvonimir Vlah</strong>  <i class="fa fa-heart-o"></i></p>
           </div>
         </div>
       </section>

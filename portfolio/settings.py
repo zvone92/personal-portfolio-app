@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '^$-v#q^ergafq9d#6aa(v137#&9yko105p*7+5*&qgj02a!%m#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://zvlah.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'zvlah.com']
 
 
 # Application definition
@@ -74,7 +74,17 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = os.environ['DATABASES']
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'zvlahcom_myportfoliodb',
+        'USER': 'zvlahcom_zvlahcom',
+        'PASSWORD': 'XCAb_R*jZy!_',
+        'HOST': 'localhost',
+        'PORT': '5432',
+
+    }
+}
 
 
 # Password validation

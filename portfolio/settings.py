@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+# production BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = '^$-v#q^ergafq9d#6aa(v137#&9yko105p*7+5*&qgj02a!%m#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['zvlah.com']
+ALLOWED_HOSTS = ['zvlah.com', 'localhost']
 
 
 # Application definition
@@ -76,10 +76,10 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'zvlahcom_myportfoliodb',
-        'USER': 'zvlahcom_zvlahcom',
-        'PASSWORD': 'XCAb_R*jZy!_',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myportfoliodb',
+        'USER': 'postgres',
+        'PASSWORD': '16162252019',
         'HOST': 'localhost',
         'PORT': '5432',
 
